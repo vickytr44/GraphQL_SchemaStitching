@@ -18,7 +18,7 @@ builder.Services
     .PublishSchemaDefinition(c => c
             .SetName("product")
             //.IgnoreRootTypes()
-            //.AddTypeExtensionsFromFile("./Stitching.graphql")
+            .AddTypeExtensionsFromFile("./Stitching.graphql")
             .PublishToRedis("gateway", sp => sp.GetRequiredService<ConnectionMultiplexer>()));
 
 var app = builder.Build();

@@ -19,6 +19,6 @@
         }
 
         public List<ProductType> GetProduct() => _product;
-        public List<ProductType> GetProductBy(string name) => _product.Where(x => x.Name == name).ToList();
+        public ProductType? GetProductBy(string name) => _product.FirstOrDefault(x => x.Name == name);
     }
 }

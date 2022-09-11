@@ -7,7 +7,7 @@
             return productRepository.GetProduct();
         }
 
-        public List<ProductType> GetProductBy([Service] ProductRepository productRepository,string name)
+        public ProductType? GetProductBy([Service] ProductRepository productRepository,string name)
         {
             return productRepository.GetProductBy(name);
         }
