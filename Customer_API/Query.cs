@@ -1,0 +1,10 @@
+﻿namespace Customer_API
+{
+    public class Query
+    {
+        public CustomerType GetCustomerByName([Service] CustomerRepository customerRepository, string name)
+        {
+            return customerRepository.GetCustomerBy(name);
+        }
+    }
+}
