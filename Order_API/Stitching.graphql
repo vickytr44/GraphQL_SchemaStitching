@@ -1,0 +1,4 @@
+﻿extend type CustomerType{
+	orders: [OrderType]
+	@delegate(path: "orderBy(name: $fields:name)")
+}
